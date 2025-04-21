@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ES6", // Или "ES6"
+    "target": "ES5",
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

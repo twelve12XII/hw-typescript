@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Contact List on JS</h1>
+    </header>
+    <div class="contact-panel">
+      <form
+        id="contact-form"
+        class="contact-panel__form contact-form"
+        action="#"
+      >
+        <input
+          class="contact-form_input"
+          type="text"
+          pattern="[A-Za-z]{3,}"
+          title="Please enter at least 3 characters"
+          required
+          id="name-input"
+          placeholder="Name"
+        />
+        <input
+          required
+          id="vacancy-input"
+          class="contact-form_input"
+          type="text"
+          pattern="[A-Za-z]{3,}"
+          title="Please enter at least 3 characters"
+          placeholder="Vacancy"
+        />
+        <input
+          required
+          id="phone-input"
+          class="contact-form_input"
+          pattern="\+\d \d{3} \d{3} \d{2} \d{2}"
+          title="Format: +X XXX XXX XX XX"
+          type="text"
+          placeholder="Phone +X XXX XXX XX XX"
+        />
+        <input class="btn" type="submit" value="ADD" />
+      </form>
+      <div class="contact-panel__actions">
+        <input
+          id="clear-contacts-btn"
+          class="btn"
+          type="button"
+          value="Clear List"
+        />
+        <input
+          id="search-contacts-btn"
+          class="btn"
+          type="button"
+          value="Search"
+        />
+      </div>
+    </div>
+    <div class="contacts"></div>
+    <div id="modal_search" class="modal">
+      <div class="modal-content search" id="search">
+        <input id="close" type="button" class="btn" value="Close" />
+        <p>Search contact</p>
+        <input
+          class="modal_search-input"
+          id="search-input"
+          type="text"
+          placeholder="Search..."
+        />
+        <div class="modal-content_cards cards"></div>
+        <input
+          id="show-all-contacts-btn"
+          class="btn"
+          type="button"
+          value="Show all"
+        />
+      </div>
+    </div>
+    <div class="modal" id="modal_edit">
+      <div class="modal-content edit">
+        <form id="contact-form" class="contact-form" action="#">
+          <input id="close" type="button" class="btn" value="Close" />
+          <p>Edit</p>
+          <input
+            id="name-input"
+            type="text"
+            pattern="[A-Za-z]{3,}"
+            title="Please enter at least 3 characters"
+            required
+            class="modal_edit-input"
+            placeholder="Name"
+          />
+          <input
+            pattern="[A-Za-z]{3,}"
+            title="Please enter at least 3 characters"
+            required
+            id="vacancy-input"
+            type="text"
+            class="modal_edit-input"
+            placeholder="Vacancy"
+          />
+          <input
+            required
+            type="text"
+            class="modal_edit-input"
+            placeholder="Phone"
+            id="phone-input"
+            pattern="\+\d \d{3} \d{3} \d{2} \d{2}"
+            title="Format: +X XXX XXX XX XX"
+          />
+          <input class="btn save" type="submit" value="Edit" />
+        </form>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./dist/script/main.js"></script>
+</html>
