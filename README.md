@@ -1,3 +1,3 @@
 # hw-typescript
-tsc
+tsc ->
 *запустить сервер*
